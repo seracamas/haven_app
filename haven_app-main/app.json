@@ -1,0 +1,64 @@
+{
+  "expo": {
+    "owner": "rmccaw",
+    "name": "Haven",
+    "slug": "haven_app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/logo.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "The camera is needed for AR functionality",
+        "NSPhotoLibraryUsageDescription": "The photo library is needed for AR functionality",
+        "NSPhotoLibraryAddUsageDescription": "Allow $(PRODUCT_NAME) to save photos",
+        "NSMicrophoneUsageDescription": "Allow $(PRODUCT_NAME) to use your microphone",
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "bundleIdentifier": "edu.stanford.cs147.Haven"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/logo.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
+      "package": "com.rmccaw.havenapp"
+    },
+    "web": {
+      "favicon": "./assets/logo.png"
+    },
+    "plugins": [
+      [
+        "@reactvision/react-viro",
+        {
+          "ios": {
+            "cameraUsageDescription": "The camera is needed for AR functionality"
+          },
+          "android": {
+            "cameraPermission": "The camera is needed for AR functionality"
+          }
+        }
+      ],
+      "expo-asset"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "702240c9-28e4-4a12-a355-dddcb90a6b23"
+      }
+    }
+  }
+}
